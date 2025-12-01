@@ -1,0 +1,5 @@
+set shell := ["powershell", "-NoLogo", "-Command"]
+
+get_input day:
+    echo "Fetching input for day {{day}}..."
+    cargo run --bin scripts_get_input -- {{day}}
