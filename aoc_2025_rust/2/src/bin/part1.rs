@@ -1,4 +1,4 @@
-use day_02::utils::get_input;
+use day_2::utils::get_input;
 use std::collections::HashSet;
 
 fn main() {
