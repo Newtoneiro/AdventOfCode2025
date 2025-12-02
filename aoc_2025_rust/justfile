@@ -3,3 +3,10 @@ set shell := ["powershell", "-NoLogo", "-Command"]
 get_input day:
     echo "Fetching input for day {{day}}..."
     cargo run --bin scripts_get_input -- {{day}}
+
+create day:
+    cargo generate --path ./.daily-template --name {{day}}
+    just get_input {{day}}
+
+run day:
+    pushd {{day}}; cargo run --bin part1; cargo run --bin part2; popd

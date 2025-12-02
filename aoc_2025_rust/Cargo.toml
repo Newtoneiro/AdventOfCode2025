@@ -9,4 +9,4 @@ reqwest = { version = "0.12", features=["blocking"] }
 
 [[bin]]
 name = "scripts_get_input"
-path = "src/bin/scripts/get_input.rs"
+path = "scripts/get_input.rs"
