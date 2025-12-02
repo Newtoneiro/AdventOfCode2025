@@ -48,7 +48,7 @@ fn prepare_file_path(day: u32) -> Result<PathBuf, Box<dyn std::error::Error>> {
         .parent()
         .and_then(|p| p.parent())
         .ok_or("Failed to determine project root")?;
-    let dir_path = project_root.join(format!("{:02}", day)).join("src");
+    let dir_path = project_root.join(format!("{}", day)).join("src");
     create_dir_all(&dir_path)?;
     Ok(dir_path.join("input.txt"))
 }

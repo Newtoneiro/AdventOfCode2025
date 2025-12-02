@@ -1,4 +1,4 @@
-use day_02::utils::read_lines;
+use day_02::utils::get_input;
 use std::collections::HashSet;
 
 fn proper_divisors(n: usize) -> Vec<usize> {
@@ -8,8 +8,7 @@ fn proper_divisors(n: usize) -> Vec<usize> {
 }
 
 fn main() {
-    let input = &read_lines("src/input.txt")[0];
-    let ranges = input.split(",");
+    let ranges = get_input("src/input.txt");
 
     let mut invalid_ids: HashSet<u64> = HashSet::new();
     for range in ranges {
